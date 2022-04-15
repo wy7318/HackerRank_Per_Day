@@ -13,7 +13,7 @@ Print the string 12345.
 from __future__ import print_function
 
 if __name__ == '__main__':
-    n = int(raw_input())
+    n = int(input())
     lst = []
     for i in range(n):
         lst.append(str(i+1))
