@@ -6,10 +6,10 @@ Please use list comprehensions rather than multiple loops, as a learning exercis
 '''
 
 if __name__ == '__main__':
-    x = int(raw_input())
-    y = int(raw_input())
-    z = int(raw_input())
-    n = int(raw_input())
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
     
     lst = []
     for i in range(x+1):
