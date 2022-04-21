@@ -10,43 +10,24 @@ In the third line, print True if S has any digits. Otherwise, print False.
 In the fourth line, print True if S has any lowercase characters. Otherwise, print False.
 In the fifth line, print True if S has any uppercase characters. Otherwise, print False.
 '''
+def identifier(inp, lst, func, length):
+    for i in inp:
+        if func(i):
+            lst.append(True)
+            break
+    if len(lst) == length:
+        lst.append(False)
+
 if __name__ == '__main__':
     s = input()
     lst = []
-    for i in range(len(s)):
-        if s[i].isalnum() == True:
-            lst.append(True)
-            break
-    if len(lst) == 0:
-        lst.append(False)
+    identifier(s, lst, str.isalnum, 0)
+    identifier(s, lst, str.isalpha, 1)
+    identifier(s, lst, str.isdigit, 2)
+    identifier(s, lst, str.islower, 3)
+    identifier(s, lst, str.isupper, 4)
     
-    for i in range(len(s)):
-        if s[i].isalpha() == True:
-            lst.append(True)
-            break
-    if len(lst) == 1:
-        lst.append(False)
-    
-    for i in range(len(s)):
-        if s[i].isdigit() == True:
-            lst.append(True)
-            break
-    if len(lst) == 2:
-        lst.append(False)
-    
-    for i in range(len(s)):
-        if s[i].islower() == True:
-            lst.append(True)
-            break
-    if len(lst) == 3:
-        lst.append(False)
-        
-    for i in range(len(s)):
-        if s[i].isupper() == True:
-            lst.append(True)
-            break
-    if len(lst) == 4:
-        lst.append(False)
+   
 
     for i in lst:
         print(i)
