@@ -4,3 +4,6 @@ If two or more students both have names ending in the same last three characters
 */
 
 SELECT Name FROM STUDENTS WHERE Marks > 75 ORDER BY RIGHT(Name, 3), ID ASC;
+
+
+-- RIGHT(column, #character) : Choose last "#character" from "column")
