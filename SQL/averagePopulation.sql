@@ -3,3 +3,6 @@ Query the average population for all cities in CITY, rounded down to the nearest
 */
 
 SELECT floor(avg(POPULATION)) FROM CITY;
+
+
+--FLOOR() : Round Down
